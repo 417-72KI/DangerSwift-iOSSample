@@ -1,0 +1,13 @@
+name: Danger
+on: 
+  pull_request:
+    types: [opened, synchronize, edited]
+jobs:
+  Danger:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Danger
+        uses: 417-72KI/danger-swiftlint@v3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
