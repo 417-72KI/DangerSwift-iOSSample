@@ -1,0 +1,6 @@
+excluded:
+  - 'Dangerfile.swift'
+  - 'DangerExtensions'
+  - '**/*.generated.swift'
+  - '**/**/*.generated.swift'
+allow_zero_lintable_files: true
