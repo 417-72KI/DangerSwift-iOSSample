@@ -1,0 +1,30 @@
+fastlane_version "2.162.0"
+
+default_platform :ios
+
+TEST_IOS_VERSION = '14.4'
+TEST_DEVICES = [
+  "iPhone 12",
+  "iPad Pro (12.9-inch) (4th generation)",
+  "iPhone SE (1st generation)"
+]
+
+platform :ios do
+  before_all do
+    ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "120"
+    ENV["FASTLANE_XCODE_LIST_TIMEOUT"] = "120"
+  end
+
+  desc "Run unit test"
+  lane :unit_test do |options|
+    scan(
+        scheme: "DangerSwift-iOSSample",
+        devices: TEST_DEVICES.map { |v| "#{v} (#{TEST_IOS_VERSION})" },
+        output_types: '', 
+        fail_build: false,
+        result_bundle: true,
+    )
+
+    trainer(path: './fastlane/test_output', output_directory: './fastlane/test_output')
+  end
+end
