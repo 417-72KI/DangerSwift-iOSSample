@@ -1,5 +1,21 @@
 {
-  "extends": [
-    "config:base"
-  ]
+    "extends": [
+        "config:base",
+        "schedule:weekly"
+    ],
+    "timezone": "Asia/Tokyo",
+    "vulnerabilityAlerts": {
+        "labels": [
+            "security"
+        ]
+    },
+    "labels": [
+        "dependencies"
+    ],
+    "enabledManagers": [
+        "bundler",
+        "cocoapods",
+        "swift",
+        "regex"
+    ]
 }
