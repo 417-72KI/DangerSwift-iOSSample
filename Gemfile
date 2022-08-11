@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem 'fastlane', '2.208.0'
+gem 'fastlane', '2.209.0'
 gem 'cocoapods', '1.11.3'
 gem 'synx', '0.2.1'
 gem 'dotenv', '2.8.1'
