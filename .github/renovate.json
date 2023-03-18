@@ -23,5 +23,10 @@
     },
     "minor": {
         "automerge": false
+    },
+    "bundler": {
+        "minor": {
+            "automerge": true
+        }    
     }
 }
