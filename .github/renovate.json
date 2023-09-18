@@ -1,15 +1,6 @@
 {
     "extends": [
-        "config:base"
-    ],
-    "timezone": "Asia/Tokyo",
-    "vulnerabilityAlerts": {
-        "labels": [
-            "security"
-        ]
-    },
-    "labels": [
-        "dependencies"
+        "github>417-72KI/renovate-config"
     ],
     "enabledManagers": [
         "bundler",
@@ -17,17 +8,5 @@
         "github-actions",
         "swift",
         "regex"
-    ],
-    "automerge": true,
-    "major": {
-        "automerge": false
-    },
-    "minor": {
-        "automerge": false
-    },
-    "bundler": {
-        "minor": {
-            "automerge": true
-        }    
-    }
+    ]
 }
