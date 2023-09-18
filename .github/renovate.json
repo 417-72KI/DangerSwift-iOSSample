@@ -14,6 +14,7 @@
     "enabledManagers": [
         "bundler",
         "cocoapods",
+        "github-actions",
         "swift",
         "regex"
     ],
